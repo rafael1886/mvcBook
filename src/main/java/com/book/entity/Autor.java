@@ -1,7 +1,5 @@
 package com.book.entity;
 
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -9,18 +7,18 @@ import java.io.Serializable;
  * Created by rafael on 2015-05-06.
  */
 @Entity
-@Table (name = "autor")
+@Table(name = "autor")
 public class Autor implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column (name = "imie", nullable = false)
+    @Column(name = "imie", nullable = false)
     private String imie;
-    @Column (name = "nazwisko", nullable = false)
+    @Column(name = "nazwisko", nullable = false)
     private String nazwisko;
-    @Column (name = "miejsceUrodzenia", nullable = false)
+    @Column(name = "miejsceUrodzenia", nullable = false)
     private String miejsceUrodzenia;
-    @Column (name = "rokUrodzenia", nullable = false)//, columnDefinition = "YEAR")
+    @Column(name = "rokUrodzenia", nullable = false)//, columnDefinition = "YEAR")
     private Integer rokUrodzenia;
 
     public Autor() {

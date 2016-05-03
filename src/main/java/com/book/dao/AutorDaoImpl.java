@@ -27,7 +27,7 @@ public class AutorDaoImpl implements AutorDao {
     }
 
     public List<Autor> getAll() {
-        logger.info("Pobieranie listy Autorów");
+        logger.info("Getting lists autors");
         return sessionFactory.getCurrentSession().createCriteria(Autor.class).list();
     }
 
@@ -49,7 +49,7 @@ public class AutorDaoImpl implements AutorDao {
 
     public void remove(Autor autor) {
         sessionFactory.getCurrentSession().delete(autor);
-        logger.info("Autor zosta³ usuniêty");
+        logger.info("Autor delete");
     }
 
     public void removeById(Integer id) {
@@ -62,7 +62,7 @@ public class AutorDaoImpl implements AutorDao {
 
     public void save(Autor autor) {
         sessionFactory.getCurrentSession().save(autor);
-        logger.info("Autor zosta³ zapisany " + autor.getNazwisko());
+        logger.info("Autor save " + autor.getNazwisko());
     }
 
     public void update(Autor autor) {

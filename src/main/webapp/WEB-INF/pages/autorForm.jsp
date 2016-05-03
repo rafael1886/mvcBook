@@ -27,7 +27,7 @@
       </h3>
     </div>
     <div class="panel-body">
-      <form:form id="autorRegisterForm" cssClass="form-horizontal" modelAttribute="autor" method="post" action="/saveAutor">
+      <form:form id="autorRegisterForm" cssClass="form-horizontal" modelAttribute="autor" method="post" action="/book/saveAutor">
 
         <div class="form-group">
           <div class="control-label col-xs-3"> <form:label path="imie" >Imię</form:label> </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-xs-4">
               <input type="submit" id="saveAutor" class="btn btn-primary" value="Save" onclick="return submitAutorForm();"/>
-              <div style="" class="btn " align="right"><a href="/anulujAutor">Anuluj</a></div>
+              <div style="" class="btn " align="right"><a href="/book/anulujAutor">Anuluj</a></div>
             </div>
             <div class="col-xs-4">
             </div>

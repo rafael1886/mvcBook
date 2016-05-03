@@ -20,7 +20,7 @@ public class AutorController {
     @Autowired
     private AutorService autorService;
 
-    @RequestMapping("createAutor")
+    @RequestMapping("/createAutor")
     public ModelAndView createAutor(@ModelAttribute Autor autor) {
         return new ModelAndView("autorForm");
     }
@@ -31,7 +31,7 @@ public class AutorController {
         return  new ModelAndView("autorForm", "autorObject", autor);
     }
 
-    @RequestMapping("saveAutor")
+    @RequestMapping("/saveAutor")
     public ModelAndView saveAutor (@ModelAttribute Autor autor) {
         if (autor.getId() == null || autor.getId() == 0) {
             autorService.saveAutor(autor);
@@ -42,12 +42,12 @@ public class AutorController {
         return new ModelAndView("redirect:getAllAutor");
     }
 
-    @RequestMapping("anulujAutor")
+    @RequestMapping("/anulujAutor")
     public ModelAndView anulujAutor () {
         return new ModelAndView("redirect:getAllAutor");
     }
 
-    @RequestMapping("deleteAutor")
+    @RequestMapping("/deleteAutor")
     public ModelAndView deleteAutor (@RequestParam int id) {
         autorService.removeAutorById(id);
         return new ModelAndView("redirect:getAllAutor");

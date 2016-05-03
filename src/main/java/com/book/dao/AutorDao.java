@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface AutorDao {
 
-    List<Autor> getAll();
+    List getAll();
 
     Autor getById(Integer id);
 

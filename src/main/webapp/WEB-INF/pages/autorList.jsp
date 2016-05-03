@@ -19,7 +19,7 @@
         <div class="panel-heading">
             <h3 class="panel-title">
                 <div align="left"><b>Lista Autorów</b></div>
-                <div align="right"><a href="/createAutor">Dodaj nowego autora</a></div>
+                <div align="right"><a href="/book/createAutor">Dodaj nowego autora</a></div>
             </h3>
         </div>
         <div class="panel-body">
@@ -49,7 +49,7 @@
                             <td><c:out value="${a.miejsceUrodzenia}"/></td>
                             <td><c:out value="${a.rokUrodzenia}"/></td>
 
-                            <td><a href="/editAutor/${a.id}?id=${a.id}">Edit</a></td>
+                            <td><a href="/book/editAutor/${a.id}?id=${a.id}">Edit</a></td>
                             <td><a href="deleteAutor?id=${a.id}">Delete</a></td>
                         </tr>
                     </c:forEach>
