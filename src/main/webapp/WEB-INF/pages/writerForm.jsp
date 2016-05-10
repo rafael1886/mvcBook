@@ -6,10 +6,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="rafael1886">
+<meta name="writer" content="rafael1886">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Autorzy szczegoly</title>
+  <title>Writers details</title>
   <!-- Bootstrap CSS -->
   <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
   <style type="text/css">
@@ -23,38 +23,38 @@
   <div class="panel panel-success">
     <div class="panel-heading">
       <h3 class="panel-title">
-        Employee Details
+        Writers Details
       </h3>
     </div>
     <div class="panel-body">
-      <form:form id="autorRegisterForm" cssClass="form-horizontal" modelAttribute="autor" method="post" action="/book/saveAutor">
+      <form:form id="writerRegisterForm" cssClass="form-horizontal" modelAttribute="writer" method="post" action="/book/saveWriter">
 
         <div class="form-group">
-          <div class="control-label col-xs-3"> <form:label path="imie" >Imię</form:label> </div>
+          <div class="control-label col-xs-3"> <form:label path="name" >Name</form:label> </div>
           <div class="col-xs-6">
-            <form:hidden path="id" value="${autorObject.id}"/>
-            <form:input cssClass="form-control" path="imie" value="${autorObject.imie}"/>
+            <form:hidden path="id" value="${writerObject.id}"/>
+            <form:input cssClass="form-control" path="name" value="${writerObject.name}"/>
           </div>
         </div>
 
         <div class="form-group">
-          <form:label path="nazwisko" cssClass="control-label col-xs-3">Nazwisko</form:label>
+          <form:label path="surname" cssClass="control-label col-xs-3">Surname</form:label>
           <div class="col-xs-6">
-            <form:input cssClass="form-control" path="nazwisko" value="${autorObject.nazwisko}"/>
+            <form:input cssClass="form-control" path="surname" value="${writerObject.surname}"/>
           </div>
         </div>
 
         <div class="form-group">
-          <div class="control-label col-xs-3"><form:label path="miejsceUrodzenia">Miejsce urodzenia</form:label></div>
+          <div class="control-label col-xs-3"><form:label path="placeOfBirth">Place of birth</form:label></div>
           <div class="col-xs-6">
-            <form:input cssClass="form-control" path="miejsceUrodzenia" value="${autorObject.miejsceUrodzenia}"/>
+            <form:input cssClass="form-control" path="placeOfBirth" value="${writerObject.placeOfBirth}"/>
           </div>
         </div>
 
         <div class="form-group">
-          <div class="control-label col-xs-3"><form:label path="rokUrodzenia">Rok urodzenia</form:label></div>
+          <div class="control-label col-xs-3"><form:label path="yearOfBirth">Years of birth</form:label></div>
           <div class="col-xs-6">
-            <form:input cssClass="form-control" path="rokUrodzenia" value="${autorObject.rokUrodzenia}"/>
+            <form:input cssClass="form-control" path="yearOfBirth" value="${writerObject.yearOfBirth}"/>
           </div>
         </div>
 
@@ -63,8 +63,8 @@
             <div class="col-xs-4">
             </div>
             <div class="col-xs-4">
-              <input type="submit" id="saveAutor" class="btn btn-primary" value="Save" onclick="return submitAutorForm();"/>
-              <div style="" class="btn " align="right"><a href="/book/anulujAutor">Anuluj</a></div>
+              <input type="submit" id="saveWriter" class="btn btn-primary" value="Save" onclick="return submitWriterForm();"/>
+              <input type="submit" id="cancelWriter" class=btn btn-second" value="Cancel"/>
             </div>
             <div class="col-xs-4">
             </div>
@@ -77,7 +77,7 @@
 </div>
 <script src="<c:url value="/resources/js/jquery-2.1.3.js"/>"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/resources/js/autor.js"/>"></script>
+<script src="<c:url value="/resources/js/writer.js"/>"></script>
 
 </body>
 </html>
