@@ -11,6 +11,7 @@ import java.io.Serializable;
 /**
  * Created by rafael on 2015-05-06.
  */
+
 @Getter
 @Setter
 @ToString

@@ -53,7 +53,7 @@ public class WriterController {
         return new ModelAndView("redirect:getAllWriter");
     }
 
-    @RequestMapping(value = {"getAllWriter", "/"})
+    @RequestMapping(value = {"getAllWriter", "/writer"})
     public ModelAndView getAllWriters() {
         List<Writer> writerList = writerService.getAllWriter();
         return new ModelAndView("writerList", "writerList", writerList);

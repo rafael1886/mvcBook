@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="cammon/navigation.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta charset="utf-8">
@@ -64,7 +65,7 @@
             </div>
             <div class="col-xs-4">
               <input type="submit" id="saveWriter" class="btn btn-primary" value="Save" onclick="return submitWriterForm();"/>
-              <input type="submit" id="cancelWriter" class=btn btn-second" value="Cancel"/>
+              <input type="submit" id="cancelWriter" class="btn btn-primary" value="Cancel"/>
             </div>
             <div class="col-xs-4">
             </div>
@@ -78,6 +79,5 @@
 <script src="<c:url value="/resources/js/jquery-2.1.3.js"/>"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="/resources/js/writer.js"/>"></script>
-
 </body>
 </html>
