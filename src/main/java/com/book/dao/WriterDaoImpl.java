@@ -22,10 +22,6 @@ public class WriterDaoImpl implements WriterDao {
     @Autowired
     SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
     public List<Writer> getAll() {
         logger.info("Getting lists writers");
         return sessionFactory.getCurrentSession().createCriteria(Writer.class).list();
@@ -44,7 +40,6 @@ public class WriterDaoImpl implements WriterDao {
 
     public void saveOrUpdate(Writer writer) {
         sessionFactory.getCurrentSession().saveOrUpdate(writer);
-
     }
 
     public void remove(Writer writer) {

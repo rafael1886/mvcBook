@@ -24,4 +24,10 @@ public class Books implements Serializable{
 
     @Column(name = "title", nullable = true)
     private String title;
+
+    @Column(name = "publicationDate", nullable = true)
+    private String publicationDate;
+
+    @Column(name = "category", nullable = true)
+    private String category;
 }
