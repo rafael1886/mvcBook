@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Writers </title>
+    <title>Books </title>
     <!-- Bootstrap CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
     <style type="text/css">
@@ -19,39 +19,37 @@
     <div class="panel panel-success">
         <div class="panel-heading">
             <h3 class="panel-title">
-                <div align="left"><b>Lists of writers</b></div>
-                <div align="right"><a href="/book/createWriter">Add new writer</a></div>
+                <div align="left"><b>Lists of books</b></div>
+                <div class="btn " align="right"><a href="/book/">Add new book</a></div>
             </h3>
         </div>
         <div class="panel-body">
             <c:if test="${empty writerList}">
-                Empty Writers.
+                Empty Books.
             </c:if>
             <c:if test="${not empty writerList}">
                 <table class="table table-hover table-bordered">
                     <thead style="background-color: #bce8f1;">
                     <tr>
                         <th>Id</th>
-                        <th>name</th>
-                        <th>surname</th>
-                        <th>Place of birth</th>
-                        <th>Year of birth</th>
+                        <th>Title</th>
+                        <th>Publication date</th>
+                        <th>Category</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
 
                     </thead>
                     <tbody>
-                    <c:forEach items="${writerList}" var="book">
+                    <c:forEach items="${booksList}" var="book">
                         <tr>
                             <td><c:out value="${book.id}"/></td>
-                            <td><c:out value="${book.name}"/></td>
-                            <td><c:out value="${book.surname}"/></td>
-                            <td><c:out value="${book.placeOfBirth}"/></td>
-                            <td><c:out value="${book.yearOfBirth}"/></td>
+                            <td><c:out value="${book.title}"/></td>
+                            <td><c:out value="${book.publicationDate}"/></td>
+                            <td><c:out value="${book.category}"/></td>
 
-                            <td><a href="/book/editWriter/${book.id}?id=${book.id}">Edit</a></td>
-                            <td><a href="/book/deleteWriter?id=${book.id}">Delete</a></td>
+                            <td><a href="/book/editBooks/${book.id}?id=${book.id}">Edit</a></td>
+                            <td><a href="/book/deleteBooks?id=${book.id}">Delete</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>

@@ -65,7 +65,7 @@
             </div>
             <div class="col-xs-4">
               <input type="submit" id="saveWriter" class="btn btn-primary" value="Save" onclick="return submitWriterForm();"/>
-              <input type="submit" id="cancelWriter" class="btn btn-primary" value="Cancel"/>
+              <div style="" class="btn btn-warning" align="right"><a href="/book/cancelWriter">Cancel</a> </div>
             </div>
             <div class="col-xs-4">
             </div>
