@@ -20,14 +20,14 @@
         <div class="panel-heading">
             <h3 class="panel-title">
                 <div align="left"><b>Lists of books</b></div>
-                <div class="btn " align="right"><a href="/book/">Add new book</a></div>
+                <div class="btn " align="right"><a href="/book/createBooks/">Add new book</a></div>
             </h3>
         </div>
         <div class="panel-body">
-            <c:if test="${empty writerList}">
+            <c:if test="${empty booksList}">
                 Empty Books.
             </c:if>
-            <c:if test="${not empty writerList}">
+            <c:if test="${not empty booksList}">
                 <table class="table table-hover table-bordered">
                     <thead style="background-color: #bce8f1;">
                     <tr>
@@ -60,6 +60,6 @@
 </div>
 <script src="<c:url value="/resources/js/jquery-2.1.3.js"/>"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/resources/js/writer.js"/>"></script>
+<script src="<c:url value="/resources/js/functionBook.js"/>"></script>
 </body>
 </html>

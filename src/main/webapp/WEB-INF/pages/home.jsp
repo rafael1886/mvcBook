@@ -23,6 +23,6 @@
 Welcome
 <script src="<c:url value="/resources/js/jquery-2.1.3.js"/>"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/resources/js/writer.js"/>"></script>
+<script src="<c:url value="/resources/js/functionBook.js"/>"></script>
 </body>
 </html>

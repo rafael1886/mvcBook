@@ -22,7 +22,7 @@ public class BooksController {
     @Autowired
     BooksService booksService;
 
-    @RequestMapping(value = {"/getAllBooks"})
+    @RequestMapping(value = {"/getAllBooks", "/books"})
     public ModelAndView getAllBooks() {
         List<Books> booksList = booksService.getAllBooks();
         return new ModelAndView("booksList", "booksList", booksList);
@@ -34,11 +34,11 @@ public class BooksController {
         return new ModelAndView("booksForm");
     }
 
-    @RequestMapping(value = "/editBooks{id}")
-    private ModelAndView editBooks(@RequestParam int id, @ModelAttribute Books books) {
+    @RequestMapping("/editBooks/{id}")
+    public ModelAndView editBooks(@RequestParam int id, @ModelAttribute Books books) {
         log.info("edit books");
         books = booksService.getBooksById(id);
-        return new ModelAndView("booksForm", "booksObjects", books);
+        return new ModelAndView("booksForm", "booksObject", books);
     }
 
     @RequestMapping("/saveBooks")

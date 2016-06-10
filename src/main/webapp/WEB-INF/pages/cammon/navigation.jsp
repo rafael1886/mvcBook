@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="/book/home">Home</a></li>
                 <li><a href="/book/writer">Writer</a></li>
-                <li><a href="">Book</a></li>
+                <li><a href="/book/books">Book</a></li>
                 <%--<li><a href="#section-5">Section Five</a></li>--%>
             </ul>
         </div>

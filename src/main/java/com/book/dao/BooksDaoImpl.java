@@ -28,12 +28,12 @@ public class BooksDaoImpl implements BooksDao {
     }
 
     public Books getById(Integer id) {
-        return (Books) sessionFactory.getCurrentSession().load(Books.class, id);
-//        Session session = sessionFactory.getCurrentSession();
-//        Query query = session.createQuery("select book from " + Books.class.getCanonicalName() + " book " +
-//                " where book.id = :id ");
-//        query.setInteger("id", id);
-//        return (Books) query.uniqueResult();
+//        return (Books) sessionFactory.getCurrentSession().load(Books.class, id);
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("select book from " + Books.class.getCanonicalName() + " book " +
+                " where book.id = :id ");
+        query.setInteger("id", id);
+        return (Books) query.uniqueResult();
     }
 
     public void saveOrUpdate(Books books) {
@@ -45,10 +45,9 @@ public class BooksDaoImpl implements BooksDao {
     }
 
     public void removeById(Integer id) {
-        sessionFactory.getCurrentSession().createQuery("delete from " + Books.class.getCanonicalName()
-                + " where id = :id ")
+        sessionFactory.getCurrentSession().createSQLQuery("delete from books where id = :id ")
                 .setInteger("id", id)
-                .uniqueResult();
+                .executeUpdate();
     }
 
     public void save(Books books) {
