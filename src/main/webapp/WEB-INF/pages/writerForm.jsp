@@ -28,8 +28,7 @@
             </h3>
         </div>
         <div class="panel-body">
-            <form:form id="writerRegisterForm" cssClass="form-horizontal" modelAttribute="writer" method="post"
-                       action="/book/saveWriter">
+            <form:form id="writerRegisterForm" cssClass="form-horizontal" modelAttribute="writer" method="post" action="/book/saveWriter">
 
                 <div class="form-group">
                     <div class="control-label col-xs-3"><form:label path="name">Name</form:label></div>
@@ -65,7 +64,11 @@
                 <div class="form-group">
                     <div class="control-label col-xs-3"><form:label path="yearOfBirth">Years of birth</form:label></div>
                     <div class="col-xs-6">
-                        <form:input cssClass="form-control" path="yearOfBirth" value="${writerObject.yearOfBirth}"/>
+                        <form:input cssClass="form-control" path="yearOfBirth" placeholder="YYYY-MM-DD" name="date"
+                                    value="${writerObject.yearOfBirth}"/>
+                    </div>
+                    <div class="form-group"> <!-- Submit button -->
+                        <button class="btn btn-primary " name="submit" type="submit">Submit</button>
                     </div>
                 </div>
                 <div class="alert alert-danger" id="alertYearOfBirth" hidden="true">
@@ -77,8 +80,7 @@
                         <div class="col-xs-4">
                         </div>
                         <div class="col-xs-4">
-                            <input type="submit" id="saveWriter" class="btn btn-primary" value="Save"
-                                   onclick="return submitWriterForm();"/>
+                            <input type="submit" id="saveWriter" class="btn btn-primary" value="Save" onclick="return submitWriterForm();"/>
                             <div style="" class="btn btn-warning" align="right"><a href="/book/cancelWriter">Cancel</a>
                             </div>
                         </div>
@@ -96,3 +98,16 @@
 <script src="<c:url value="/resources/js/functionBook.js"/>"></script>
 </body>
 </html>
+
+<script>
+    $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>

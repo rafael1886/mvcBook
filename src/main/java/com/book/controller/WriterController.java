@@ -37,7 +37,7 @@ public class WriterController {
 
     @RequestMapping("/saveWriter")
     public ModelAndView saveWriter(@ModelAttribute Writer writer) {
-        log.info("save writer");
+        log.info("saveBook writer");
         if (writer.getId() == null || writer.getId() == 0) {
             writerService.saveWriter(writer);
         } else {

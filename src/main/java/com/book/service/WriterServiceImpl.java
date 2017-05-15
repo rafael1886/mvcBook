@@ -4,50 +4,44 @@ import com.book.dao.WriterDao;
 import com.book.entity.Writer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Created by rafael on 2015-05-06.
  */
 @Service
+@Transactional
 public class WriterServiceImpl implements WriterService {
 
     @Autowired
-    WriterDao writerDao;
-
-    @Transactional
+    private WriterDao writerDao;
+    
     public List<Writer> getAllWriter() {
-        return writerDao.getAll();
+        return writerDao.getAllWriter();
     }
 
-    @Transactional
     public Writer getWriterById(Integer id) {
-        return writerDao.getById(id);
+        return writerDao.getByIdWriter(id);
     }
 
-    @Transactional
     public void saveOrUpdateWriter(Writer writer) {
-        writerDao.saveOrUpdate(writer);
+        writerDao.saveOrUpdateWriter(writer);
     }
 
-    @Transactional
     public void removeWriter(Writer writer) {
         writerDao.remove(writer);
     }
 
-    @Transactional
     public void removeWriterById(Integer id) {
         writerDao.removeById(id);
     }
 
-    @Transactional
     public void saveWriter(Writer writer) {
         writerDao.save(writer);
     }
 
-    @Transactional
     public void updateWriter(Writer writer) {
         writerDao.update(writer);
     }

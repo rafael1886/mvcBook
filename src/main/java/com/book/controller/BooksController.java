@@ -28,7 +28,7 @@ public class BooksController {
         return new ModelAndView("booksList", "booksList", booksList);
     }
 
-    @RequestMapping(value = "createBooks")
+    @RequestMapping(value = "/createBooks")
     public ModelAndView createBooks(@ModelAttribute Books books) {
         log.info("create books");
         return new ModelAndView("booksForm");
@@ -43,7 +43,7 @@ public class BooksController {
 
     @RequestMapping("/saveBooks")
     public ModelAndView saveBooks(@ModelAttribute Books books) {
-        log.info("save books");
+        log.info("saveBook books");
         if (books.getId() == null || books.getId() == 0) {
             booksService.saveBooks(books);
         } else {

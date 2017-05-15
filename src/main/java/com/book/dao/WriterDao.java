@@ -9,11 +9,11 @@ import java.util.List;
  */
 public interface WriterDao {
 
-    List getAll();
+    List getAllWriter();
 
-    Writer getById(Integer id);
+    Writer getByIdWriter(Integer id);
 
-    void saveOrUpdate(Writer writer);
+    void saveOrUpdateWriter(Writer writer);
 
     void remove(Writer writer);
 

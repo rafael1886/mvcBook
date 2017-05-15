@@ -9,17 +9,17 @@ import java.util.List;
  */
 public interface BooksDao {
 
-    List getAll();
+    List getAllBooks();
 
     Books getById(Integer id);
 
-    void saveOrUpdate(Books books);
+    void saveOrUpdateBook(Books books);
 
-    void remove(Books books);
+    void removeBook(Books books);
 
-    void removeById(Integer id);
+    void removeByIdBook(Integer id);
 
-    void save(Books books);
+    void saveBook(Books books);
 
-    void update(Books books);
+    void updateBook(Books books);
 }
